@@ -2,7 +2,7 @@
 
 This module-4 we have a task to build a multi step form in react + typescript 
 this is link for my project ![multistep-form](https://profound-fudge-40d4a4.netlify.app/).
-
+```
 multi-step-form-react/
 ├── public/
 ├── src/
@@ -23,7 +23,7 @@ multi-step-form-react/
 ├── package.json
 ├── README.md
 └── ...other files
-
+```
 ## To run this project locally, follow these steps:
 
 Clone the repository:
