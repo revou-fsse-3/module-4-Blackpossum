@@ -141,7 +141,7 @@ const MultiStepForm: React.FunctionComponent = () => {
           <button type="button" onClick={handleReset} className="mr-4 bg-red-800 border-2">
           Reset
           </button>
-          <button type="submit" className=" bg-yellow-500 text-black border-2 rounded-lg">Submit</button>
+          <button type="submit" className="bg-yellow-500 text-black border-2 rounded-lg">Submit</button>
           </>)}
       </div>
     </form>
