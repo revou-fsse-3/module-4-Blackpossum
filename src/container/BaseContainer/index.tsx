@@ -52,8 +52,12 @@ const MultiStepForm: React.FunctionComponent = () => {
       password: "",
     },
     onSubmit: (values) => {
+      const storedData =localStorage.getItem('submittedData');
+      const parsedData = storedData ? JSON.parse(storedData) : [];
+      localStorage.setItem('submitedData',JSON.stringify([...parsedData,values]))
       alert("sign up sucessfuly, please check your email for verification")
       console.log(values);
+      formik.resetForm();
     },
     validationSchema: Yup.object().shape({
       ...step1ValidationSchema.fields,
