@@ -1,15 +1,14 @@
 // import { default as Basic } from "./component/Formik";
 import "./App.css";
+import pageLogo from "../src/assets/Tablet login-amico.svg"
 import MultiStepForm from "./container/BaseContainer";
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500">
-      <div className="bg-white p-8 rounded-md shadow-md">
-        <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">Sign Up</h1>
+      <div className="flex flex-row space-x-40">
+        <img src={pageLogo} alt="signUp-logo" />
         <MultiStepForm />
       </div>
-    </div>
   );
 }
 

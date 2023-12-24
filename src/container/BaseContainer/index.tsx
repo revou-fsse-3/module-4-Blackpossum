@@ -51,6 +51,7 @@ const MultiStepForm: React.FunctionComponent = () => {
       password: "",
     },
     onSubmit: (values) => {
+      prompt("sign up sucessfuly, please check your email for verification")
       console.log(values);
     },
     validationSchema: Yup.object().shape({
@@ -78,8 +79,9 @@ const MultiStepForm: React.FunctionComponent = () => {
     setCurrentStep((prevStep) => prevStep - 1);
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="flex bg-white shadow-md rounded-md py-5">
+      <form onSubmit={handleSubmit}>
+        <h1 className="pb-10">Sign up</h1>
+      <div>
       {/* Step 1: Address Information */}
       {/* import similar code from step2 file tsx and error messages */}
         {currentStep === 1 && (
@@ -117,18 +119,18 @@ const MultiStepForm: React.FunctionComponent = () => {
       </div>
       {/* Button navigasi dan submit*/}
 
-      <div>
+      <div className="pt-8">
         {currentStep >1 &&(
-          <button type="button" onClick={prevStep} className="mr-4"> Previous </button>
+          <button type="button" onClick={prevStep} className="mr-4 bg-indigo-800 border-4"> Previous </button>
         )}
         {currentStep < 3 ?(
-          <button type="button" onClick={nextStep}> Next </button>
+          <button type="button" onClick={nextStep} className="mr-4 bg-indigo-800 border-4"> Next </button>
         ):(
           <>
-          <button type="button" onClick={handleReset} className="mr-4">
+          <button type="button" onClick={handleReset} className="mr-4 bg-red-800 border-2">
           Reset
           </button>
-          <button type="submit" className=" bg-green-500 text-white rounded-md">Submit</button>
+          <button type="submit" className=" bg-yellow-500 text-black border-2 rounded-lg">Submit</button>
           </>)}
       </div>
     </form>

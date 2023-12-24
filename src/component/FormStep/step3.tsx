@@ -27,35 +27,42 @@ const step3: React.FunctionComponent<Step3Props> = ({
   handleBlur,
 }) => {
   return (
-    <div className="bg-white shadow-md rounded-md p-6">
+    <div id="formCard" className="flex flex-col bg-slate-900 shadow-md rounded-lg p-5">
       <h2 className="text-xl font-semibold mb-4">
-        {" "}
+        {" > "}
         Setup your Account Information
       </h2>
-      <div className="mb-4" id="container-account">
-        <Label htmlFor="fullname">username:</Label>
+      <div className="mb-4 flex space-x-4" id="container-account">
+        <div id="field">
+        <Label htmlFor="fullname">username</Label>
+        </div>
         <InputField
           id="username"
           name="username"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.username}
-          className=""
+          className="rounded-lg p-1"
+          placeholder="enter a Username"
         />
         {errors.username && touched.username && (
           <div className="text-red-500">{errors.username}</div>
         )}
       </div>
 
-      <div className="mb-4" id="container-account">
-        <Label htmlFor="password">password:</Label>
+      <div className="flex space-x-4" id="container-account">
+        <div id="field">
+        <Label htmlFor="password">password</Label>
+        </div>
         <InputField
           type="password"
           id="password"
           name="password"
+          placeholder="enter a password"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.password}
+          className="rounded-lg p-1"
         />
         {errors.password && touched.password && (
           <div className="text-red-500">{errors.password}</div>

@@ -31,13 +31,15 @@ const step1: React.FunctionComponent<Step1Props> = ({
 }) => {
   return (
 
-    <div className=" flex bg-white shadow-md rounded-md p-5">
+    <div id="formCard" className="flex flex-col bg-slate-900 shadow-md rounded-lg p-5">
       <h2 className="text-xl font-semibold mb-4">
-        {" "}
+        {" > "}
         please enter your personal Identification
       </h2>
-      <div className="mb-4" id="container-account">
-        <Label htmlFor="fullName">Full name:</Label>
+      <div className="mb-4 flex  flex-col" id="container-account">
+        <div id="field">
+        <Label htmlFor="fullName">Full name  </Label>
+        </div>
         <InputField
           id="fullName"
           name="fullName"
@@ -45,14 +47,17 @@ const step1: React.FunctionComponent<Step1Props> = ({
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.fullName}
+          className="rounded-lg p-1"
         />
         {errors.fullName && touched.fullName && (
           <div className="text-red-500">{errors.fullName}</div>
         )}
       </div>
 
-      <div className="mb-4" id="container-account">
-        <Label htmlFor="email">Email Address:</Label>
+      <div className="mb-4 flex flex-col" id="container-account">
+        <div id="field">
+        <Label htmlFor="email">Email Address  </Label>
+        </div>
         <InputField
           type="text"
           id="email"
@@ -61,14 +66,17 @@ const step1: React.FunctionComponent<Step1Props> = ({
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.email}
+          className="rounded-lg p-1"
         />
         {errors.email && touched.email && (
           <div className="text-red-500">{errors.email}</div>
         )}
       </div>
 
-      <div className="mb-4" id="container-account">
-        <Label htmlFor="dob">Date of Birth</Label>
+      <div className="mb-4 flex flex-col" id="container-account">
+        <div id="field">
+        <Label htmlFor="dob">Date of Birth  </Label>
+        </div>
         <InputField
           type="text"
           id="dob"
@@ -77,6 +85,7 @@ const step1: React.FunctionComponent<Step1Props> = ({
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.dob}
+          className=" text-center rounded-lg p-1"
         />
         {errors.dob && touched.dob && (
           <div className="text-red-500">{errors.dob}</div>
