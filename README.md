@@ -1,7 +1,7 @@
 # React app - project MultiStep form
 
 This module-4 we have a task to build a multi step form in react + typescript 
-this is link for my project ![multistep-form](https://profound-fudge-40d4a4.netlify.app/).
+this is link for my project https://profound-fudge-40d4a4.netlify.app/.
 ```
 multi-step-form-react/
 ├── public/
