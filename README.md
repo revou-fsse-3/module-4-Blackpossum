@@ -1,29 +1,49 @@
-# React + TypeScript + Vite
+# React app - project MultiStep form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This module-4 we have a task to build a multi step form in react + typescript 
+this is link for my project ![multistep-form](https://profound-fudge-40d4a4.netlify.app/).
 
-Currently, two official plugins are available:
+multi-step-form-react/
+├── public/
+├── src/
+|    |___container/
+│   ├── components/
+|   |   |__ baseContainer/
+|   |        |__ index.tsx
+|   |   | index.ts
+│   │   ├── FormStep/
+│   │   │   ├── Step1.tsx
+│   │   │   ├── Step2.tsx
+│   │   │   └── Step3.tsx
+│   │   └── ...other components
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── ...other files
+├── .gitignore
+├── package.json
+├── README.md
+└── ...other files
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## To run this project locally, follow these steps:
 
-## Expanding the ESLint configuration
+Clone the repository:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Copy code
 ```
+git clone https://github.com/your-username/multi-step-form-react.git
+cd module-4-Blackpossum
+```
+### Install dependencies:
+
+```
+npm install
+```
+### Start the development server:
+run this :
+```
+npm start
+```
+Open your browser and visit ___http://localhost:3000.___
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
