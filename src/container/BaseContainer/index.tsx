@@ -52,7 +52,7 @@ const MultiStepForm: React.FunctionComponent = () => {
       password: "",
     },
     onSubmit: (values) => {
-      prompt("sign up sucessfuly, please check your email for verification")
+      alert("sign up sucessfuly, please check your email for verification")
       console.log(values);
     },
     validationSchema: Yup.object().shape({
