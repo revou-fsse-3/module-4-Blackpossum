@@ -34,7 +34,7 @@ const step2: React.FunctionComponent<Step2Props> = ({
   handleBlur,
 }) => {
   return (
-    <div id="formCard"className="flex flex-col bg-slate-900 shadow-md rounded-lg p-5">
+    <div id="formCard"className="flex flex-col bg-violet-900 shadow-md rounded-lg p-5">
       <h2 className="text-xl font-semibold mb-4">
         {" > "}
         we need your Address enter your Address Information

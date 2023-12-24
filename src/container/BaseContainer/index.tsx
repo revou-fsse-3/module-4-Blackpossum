@@ -38,6 +38,7 @@ const step3ValidationSchema = Yup.object({
 
 const MultiStepForm: React.FunctionComponent = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const totalSteps: number = 3;
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -81,6 +82,16 @@ const MultiStepForm: React.FunctionComponent = () => {
   return (
       <form onSubmit={handleSubmit}>
         <h1 className="pb-10">Sign up</h1>
+        <div className="flex items-center mb-4">
+        {Array.from({ length: totalSteps }).map((_, index) => (
+          <div
+            key={index}
+            className={`flex-1 h-2 ${
+              index < currentStep ? 'bg-green-500' : 'bg-gray-300'
+            } mx-1 rounded-full`}
+          />
+        ))}
+      </div>
       <div>
       {/* Step 1: Address Information */}
       {/* import similar code from step2 file tsx and error messages */}
