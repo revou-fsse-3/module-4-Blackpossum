@@ -48,12 +48,12 @@ function App() {
                   password: undefined,
                 }}
                 handleChange={function (
-                  event: ChangeEvent<HTMLInputElement>
+                  _event: ChangeEvent<HTMLInputElement>
                 ): void {
                   throw new Error("Function not implemented.");
                 }}
                 handleBlur={function (
-                  event: FocusEvent<HTMLInputElement, Element>
+                  _event: FocusEvent<HTMLInputElement, Element>
                 ): void {
                   throw new Error("Function not implemented.");
                 }}
