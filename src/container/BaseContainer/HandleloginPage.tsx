@@ -50,7 +50,7 @@ const LoginPage: React.FC<LoginProps> = ({
       await validationSchema.validate(values, {abortEarly:false})
       const res = await axios.post('https://mock-api.arikmpt.com/api/user/login',values)
       localStorage.setItem('token',res.data.token) 
-      navigate('/product-detail/:id')
+      navigate('/product-detail')
     } catch(error){
       console.log("Login error:", error)
     }
