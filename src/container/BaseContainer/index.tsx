@@ -6,6 +6,7 @@ import Step1 from "../../component/FormStep/step1"; // Adjust the path based on 
 import Step2 from "../../component/FormStep/step2"; // Assuming Step2 and Step3 have similar naming conventions
 import Step3 from "../../component/FormStep/step3";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 // Step 1 validation schema
 const step1ValidationSchema = Yup.object({
@@ -38,6 +39,7 @@ const step3ValidationSchema = Yup.object({
 });
 
 const MultiStepForm: React.FunctionComponent = () => {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps: number = 3;
   const formik = useFormik({
@@ -55,10 +57,11 @@ const MultiStepForm: React.FunctionComponent = () => {
     onSubmit: (values) => {
       const storedData =localStorage.getItem('submittedData');
       const parsedData = storedData ? JSON.parse(storedData) : [];
-      localStorage.setItem('submitedData',JSON.stringify([...parsedData,values]))
-      alert("sign up sucessfuly, please check your email for verification")
+      localStorage.setItem('submittedData',JSON.stringify([...parsedData,values]))
+      alert("sign up sucessfuly, please login to acces your account")
       console.log(values);
       formik.resetForm();
+      () => {navigate('/login')} ;
     },
     validationSchema: Yup.object().shape({
       ...step1ValidationSchema.fields,
