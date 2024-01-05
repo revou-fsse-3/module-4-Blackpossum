@@ -1,7 +1,6 @@
 import React from "react";
 import Label from "../LabelText/Label";
 import { InputField } from "../../component";
-
 interface Step3Props {
   values: {
     username: string;

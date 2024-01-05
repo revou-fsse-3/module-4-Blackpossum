@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import Step1 from "../../component/FormStep/step1"; // Adjust the path based on your project structure
 import Step2 from "../../component/FormStep/step2"; // Assuming Step2 and Step3 have similar naming conventions
 import Step3 from "../../component/FormStep/step3";
+import { Button } from "@/components/ui/button";
 
 // Step 1 validation schema
 const step1ValidationSchema = Yup.object({
@@ -85,7 +86,7 @@ const MultiStepForm: React.FunctionComponent = () => {
   };
   return (
       <form onSubmit={handleSubmit}>
-        <h1 className="pb-10">Sign up</h1>
+        <h1 className="pb-10 text-center font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Sign up</h1>
         <div className="flex items-center mb-4">
         {Array.from({ length: totalSteps }).map((_, index) => (
           <div
@@ -136,16 +137,16 @@ const MultiStepForm: React.FunctionComponent = () => {
 
       <div className="pt-8">
         {currentStep >1 &&(
-          <button type="button" onClick={prevStep} className="mr-4 bg-indigo-800 border-4"> Previous </button>
+          <Button type="button" onClick={prevStep} className="mr-10 bg-indigo-800 border-4"> Previous </Button>
         )}
         {currentStep < 3 ?(
-          <button type="button" onClick={nextStep} className="mr-4 bg-indigo-800 border-4"> Next </button>
+          <Button type="button" onClick={nextStep} className="mr-10 bg-indigo-800 border-4"> Next </Button>
         ):(
           <>
-          <button type="button" onClick={handleReset} className="mr-4 bg-red-800 border-2">
+          <Button type="button" onClick={handleReset} className="mr-10 bg-red-800 border-2">
           Reset
-          </button>
-          <button type="submit" className="bg-yellow-500 text-black border-2 rounded-lg">Submit</button>
+          </Button>
+          <Button type="submit" className="bg-yellow-500 text-black border-2 rounded-lg">Submit</Button>
           </>)}
       </div>
     </form>
