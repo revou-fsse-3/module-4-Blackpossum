@@ -3,76 +3,42 @@ import "./App.css";
 import MultiStepForm from "./container/BaseContainer";
 import signupBackground from "../src/assets/Innovation-amico.svg";
 import pageBakground from "../src/assets/Tablet login-amico.svg";
-import loginBackground from "../src/assets/grammar correction-rafiki.svg"
+import loginBackground from "../src/assets/grammar correction-rafiki.svg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ChangeEvent, FocusEvent } from "react";
-import LoginPage from "./container/BaseContainer/HandleloginPage";
-import LandingPage from "./container/BaseContainer/LandingPage";
-import ProtectedLayout from "./layout/ProtectedLayout";
-
+import LoginPage from "./pages/HandleloginPage";
+import LandingPage from "./pages/LandingPage";
+import BasicContainer from "./container/BasicContainer";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 function App() {
-
-
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path="/"
           element={
-            <div className="w-[800px] h-[800px] flex flex-row gap-40 my-40 mx-40">
-              <img src={pageBakground} alt="background" />
+            <BasicContainer background={pageBakground}>
               <LandingPage />
-            </div>
+            </BasicContainer>
           }
         />
         <Route
           path="/login"
           element={
-            <div className="flex flex-row gap-20 my-40 mx-40">
-              <img src={loginBackground} alt="image-site" className="w-[600px] h-[600px]" />
-              <LoginPage
-                values={{
-                  email: "",
-                  password: "",
-                }}
-                errors={{
-                  username: undefined,
-                  password: undefined,
-                }}
-                touched={{
-                  username: undefined,
-                  password: undefined,
-                }}
-                handleChange={function (
-                  _event: ChangeEvent<HTMLInputElement>
-                ): void {
-                  throw new Error("Function not implemented.");
-                }}
-                handleBlur={function (
-                  _event: FocusEvent<HTMLInputElement, Element>
-                ): void {
-                  throw new Error("Function not implemented.");
-                }}
-              />
-            </div>
+            <BasicContainer background={loginBackground}>
+              <LoginPage />
+            </BasicContainer>
           }
         />
         <Route
           path="/signup"
           element={
-            <div className="flex flex-row gap-40 my-40 mx-40">
-              <img src={signupBackground} className="w-[700px] h-[700px]" alt="image-site" />
+            <BasicContainer background={signupBackground}>
               <MultiStepForm />
-            </div>
+            </BasicContainer>
           }
         />
-        <Route
-        path="/product-detail"
-        element={
-          <ProtectedLayout />
-        }
-        />
+        <Route path="/product-detail" element={<ProductDetailPage />} />
         <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
     </BrowserRouter>
