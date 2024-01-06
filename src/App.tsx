@@ -15,9 +15,6 @@ function App() {
 
 
   return (
-    // <div>
-    //   <RouterProvider router={route}/>
-    // </div>
     <BrowserRouter>
       <Routes>
         <Route
@@ -32,8 +29,8 @@ function App() {
         <Route
           path="/login"
           element={
-            <div className="flex flex-row gap-40 my-40 mx-40">
-              <img src={loginBackground} alt="image-site" className="w-[700px] h-[700px]" />
+            <div className="flex flex-row gap-20 my-40 mx-40">
+              <img src={loginBackground} alt="image-site" className="w-[600px] h-[600px]" />
               <LoginPage
                 values={{
                   email: "",
@@ -64,8 +61,8 @@ function App() {
         <Route
           path="/signup"
           element={
-            <div className="w-[500px] h-[500px] flex flex-row gap-40 my-40 mx-40">
-              <img src={signupBackground} alt="image-site" />
+            <div className="flex flex-row gap-40 my-40 mx-40">
+              <img src={signupBackground} className="w-[700px] h-[700px]" alt="image-site" />
               <MultiStepForm />
             </div>
           }
