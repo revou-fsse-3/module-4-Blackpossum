@@ -1,4 +1,4 @@
-    
+// create public layout format 
 
 const PublicLayout = () => {
   return (
