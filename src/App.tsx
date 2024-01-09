@@ -17,7 +17,7 @@ function App() {
         <Route
           path="/"
           element={
-            <BasicContainer background={pageBakground}>
+            <BasicContainer background={pageBakground}> //add background picture ass a props from BasicContainer.tsx
               <LandingPage />
             </BasicContainer>
           }

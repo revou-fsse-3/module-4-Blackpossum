@@ -1,5 +1,7 @@
 import React from "react";
 
+// make component wrapper
+
 type Props = {
   children: React.ReactNode;
   background: string;

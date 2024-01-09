@@ -56,7 +56,7 @@ const LoginPage: React.FC<LoginProps> = ({}) => {
                   <div className="flex space-x-4" id="container-account">
                     <div id="field">
                       <Label htmlFor="email">Email</Label>
-                      <Field id="email" name="email" placeholder="email" />
+                      <Field id="email" type="text" name="email" placeholder="email" />
                     </div>
                   </div>
 
